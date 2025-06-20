@@ -43,6 +43,10 @@ def main():
             if(aster.is_colliding(player)):
                 print("Game over!")
                 return
+            for shot in shots:
+                if(aster.is_colliding(shot)):
+                    shot.kill()
+                    aster.split()
 
         pygame.display.flip()
 
